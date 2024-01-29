@@ -1,0 +1,108 @@
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+form {
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.play-again-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.play-again-button:hover {
+  background-color: #0056b3;
+}
+#hangman .head {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  left: 75px;
+}
+
+#hangman .body {
+  width: 10px;
+  height: 100px;
+  background-color: black;
+  position: relative;
+  top: 50px;
+  left: 95px;
+}
+
+#hangman .arm.left {
+  width: 50px;
+  height: 10px;
+  background-color: black;
+  position: relative;
+  top: 60px;
+  left: 50px;
+}
+
+#hangman .arm.right {
+  width: 50px;
+  height: 10px;
+  background-color: black;
+  position: relative;
+  top: 60px;
+  left: 100px;
+}
+
+#hangman .leg.left {
+  width: 10px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  top: 110px;
+  left: 75px;
+}
+
+#hangman .leg.right {
+  width: 10px;
+  height: 50px;
+  background-color: black;
+  position: relative;
+  top: 110px;
+  left: 115px;
+}
+#guesses img {
+  width: 50px;
+  height: 50px;
+}

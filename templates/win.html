@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>You Won!</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="center-content">
+      <h1>Congratulations, you won!</h1>
+      <a class="play-again-button" href="{{ url_for('home') }}">Play Again</a>
+    </div>
+  </body>
+</html>

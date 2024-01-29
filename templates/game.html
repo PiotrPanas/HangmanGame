@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hangman Game</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/static/hangman.js"></script>
+  </head>
+  <body>
+    <h1>Hangman Game</h1>
+    <p>Guess a letter:</p>
+    <form method="POST">
+      <input type="text" name="letter" required />
+      <input type="submit" value="Guess" />
+    </form>
+    <p>
+      Word: {% for letter in word %} {% if letter in guesses %} {{ letter }} {%
+      else %} _ {% endif %} {% endfor %}
+    </p>
+    <p>Guesses: {{ guesses }}</p>
+    <div id="hangman"></div>
+    <div id="guesses"></div>
+
+    <script>
+      var incorrectGuesses = localStorage.getItem("incorrectGuesses") || 0;
+      guessHearts(incorrectGuesses);
+    </script>
+  </body>
+</html>
